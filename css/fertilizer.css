@@ -1,0 +1,129 @@
+/* ------------------------------------ */
+/* 1. Global & Variables */
+/* ------------------------------------ */
+:root {
+    --color-primary: #52731d; /* Deep Forest Green */
+    --color-secondary: #f0f8e9; /* Light Mint Cream */
+    --color-text: #333;
+    --color-heading: #2d4212; 
+    --font-sans: 'Roboto', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: #fff;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ------------------------------------ */
+/* 2. Header & Footer */
+/* ------------------------------------ */
+.site-header {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.site-footer {
+    background-color: var(--color-heading);
+    color: var(--color-secondary);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+
+.site-footer a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ------------------------------------ */
+/* 3. Typography & Article Structure */
+/* ------------------------------------ */
+.guide-article {
+    padding: 20px 0;
+}
+
+h1 {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--color-heading);
+    margin: 20px 0 10px;
+}
+
+h2 {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+h3 {
+    font-size: 1.1rem;
+    color: var(--color-heading);
+    margin-top: 1rem;
+}
+
+.meta-info {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.pro-tip {
+    background-color: var(--color-secondary);
+    border-left: 5px solid var(--color-primary);
+    padding: 15px;
+    margin: 1.5rem 0;
+    font-style: italic;
+    border-radius: 4px;
+}
+
+.recipe-step {
+    padding: 10px 0;
+}
+
+ol {
+    margin: 1rem 0 1.5rem 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+}
