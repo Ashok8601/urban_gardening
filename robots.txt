@@ -1,0 +1,13 @@
+# User-agent: *
+User-agent: *
+
+# Disallow: /admin/
+Disallow: /admin/
+Disallow: /wp-admin/ 
+Disallow: /cgi-bin/
+
+# Allowing necessary files
+Allow: /wp-admin/admin-ajax.php
+
+# IMPORTANT: Update the Sitemap URL to your Render domain
+Sitemap: https://urban-gardening-rfdi.onrender.com/sitemap.xml
