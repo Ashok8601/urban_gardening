@@ -1,0 +1,231 @@
+/*
+ * styles.css
+ * Khan Sir Hospital Patna - Responsive & Clean UI/UX
+ */
+
+/* 1. Global Reset & Typography */
+:root {
+    --primary-color: #007bff; /* Blue */
+    --secondary-color: #28a745; /* Green */
+    --light-bg: #f8f9fa;
+    --dark-text: #343a40;
+    --border-color: #dee2e6;
+    --font-family-hindi: 'Poppins', 'Nirmala UI', 'Segoe UI', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-hindi);
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 2. Header & Navigation */
+.site-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.site-header h1 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+.site-header .tagline {
+    font-size: 1.05em;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.site-header nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    padding: 5px 0;
+    transition: border-bottom 0.3s;
+}
+
+.site-header nav a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* 3. Main Content Cards */
+main.container {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--secondary-color); /* Highlight for sections */
+}
+
+.card h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.card h3 {
+    color: var(--dark-text);
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.card p, .card ul, .card ol, .card dl {
+    margin-bottom: 15px;
+}
+
+.card ul, .card ol {
+    padding-left: 20px;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+.note {
+    background-color: #fff3cd; /* Light warning color */
+    color: #856404;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #ffc107;
+    margin-top: 20px;
+}
+
+/* 4. Gallery & Images */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.lazyimg {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent look */
+    object-fit: cover; /* Ensures images cover the area */
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    background-color: #e9ecef; /* Placeholder color before loading */
+}
+
+.lazyimg:hover {
+    transform: scale(1.02);
+}
+
+/* 5. Buttons & CTAs */
+.contact-cta {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn.secondary:hover {
+    background-color: #1e7e34;
+}
+
+/* 6. FAQ (DL structure) */
+dt {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+dd {
+    margin-left: 0;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    border-left: 3px solid var(--border-color);
+}
+
+/* 7. Footer */
+footer {
+    border-top: 1px solid var(--border-color);
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+.disclaimer {
+    font-style: italic;
+    color: #dc3545;
+    margin-top: 15px;
+}
+
+/* 8. Responsiveness (Mobile First) */
+@media (max-width: 768px) {
+    .site-header h1 {
+        font-size: 1.8em;
+    }
+    .site-header nav {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .site-header nav a {
+        display: block;
+        margin: 5px 0;
+    }
+    .card {
+        padding: 20px;
+    }
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Stack images on small screens */
+    }
+    .btn {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
